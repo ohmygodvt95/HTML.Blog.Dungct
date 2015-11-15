@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Copyright @ 2015 Le Vinh Thien - HUST - Hedspi K58 levinhthien.bka@gmail.com -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Tuan-Dung Cao - Projetcs">
+        <META NAME="keywords" CONTENT="Tuan-Dung Cao, Projetcs">
+        <meta name="copyright" content="Copyright 2015 by Tuan-Dung Cao">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+        <meta property="og:title" content="Tuan-Dung Cao" />
+        <meta property="og:locale" content="vi_VN" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="images/img.jpg" />
+        <meta property="og:description" content="Tuan-Dung Cao Projetcs" />
+        <meta property="og:site_name" content="Tuan-Dung Cao" />
+        <meta property="fb:admins" content="" />
+        <title>Tuan-Dung Cao - Projetcs</title>
+        <link rel="stylesheet" type="text/css" href="css/reset.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+        <link rel="stylesheet" type="text/css" href="css/timeline.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500|Raleway:400,500' rel='stylesheet' type='text/css'>
+        <style>
+            .publication li{
+                transition: 0.25s;
+                -webkit-transition: 0.25s;
+                text-align: justify;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+            .publication li:hover{
+                color: #28ABE3;
+            }
+            .publication h1{
+                margin-top: 50px;
+                transition: 0.5s;
+                -webkit-transition: 0.5s;
+                border-left: 10px solid #323232;
+                padding-left: 10px;
+                cursor: pointer;
+            }
+            .publication h1:hover{
+                padding-left: 50px;
+                color: #FA6900;
+            }
+        </style>
+    </head>
+    <body onresize="reSize()">
+        <!-- Navbar -->
+        <nav class="top-nav">
+            <ul class="top-nav nav_list">
+                <li class="sub"><a href="index.html#about" title="About">About me</a></li>
+                <li class="sub"><a href="index.html#teaching">Teaching</a></li>
+                <li class="logo"><a title="Home" href="index.html"><img src="http://soict.hust.edu.vn/~dungct/Images/anh3.gif" height="50px" alt="" class="responsive"/></a></li>
+                <li class="sub"><a href="publication.html" title="Publication">Publication</a></li>
+                <li class="sub"><a href="project.html" title="Project">Project</a></li>
+            </ul>
+            <a id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+        </nav>
+        <!-- Home -->
+        <section id="home">
+            <div class="bg-home">
+                <div class="container home">
+                    <h1 class="text-center raleway upcase heading"><span>P</span>rojec<span>t</span></h1>
+                    <img src="images/project.png" class="responsive center-block"  height="200px" alt="">
+                    <div class="publication col-sm-10 col-sm-offset-1">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <div class="container">
+                <h3 class="text-center">Tuan-Cao Dung | Cao Tuấn Dũng</h3>
+            </div>
+        </footer>
+        <!-- JS -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Plugin -->
+        <script src="js/makedown.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/loading.js"></script>
+        <script>
+        $(document).ready(function() {
+            $('#pull').click(function(event) {
+               $('.sub').toggleClass('show');
+            });
+            function loadData(){
+                $.post('data/project.md', {}, function(data, textStatus, xhr) {
+                    if(textStatus == "success"){
+                        var converter = new showdown.Converter(),
+                        html      = converter.makeHtml(data);
+                        $('div.publication').html(html);
+                    }
+                });
+            }
+                loadData();
+         });
+        function reSize () {
+                if ($('body').width() > 768) {
+                    $('nav .sub').removeClass('show')
+                };
+            }
+
+        </script>
+
+    </body>
+</html>

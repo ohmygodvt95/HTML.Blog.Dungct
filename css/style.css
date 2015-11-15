@@ -1,0 +1,242 @@
+/**
+ *	@author Le Vinh Thien
+ *	@email  ohmygodvt95@gmail.com
+ * @copyright Semantic Innovation Group 31/8/2015
+ **/
+body, html{
+    width: 100%;
+    height: 100%!important;
+}
+/*Font*/
+.roboto{
+    font-family: 'Roboto';
+}
+.raleway{
+    font-family: 'Raleway';
+}
+.upcase{
+    text-transform: uppercase;
+}
+.white{
+    color: #fff;
+}
+/* top-nav */
+.show{
+    display: inline-block;
+}
+.top-nav:before,.top-nav:after {
+    content: " ";
+    display: table;
+}
+.top-nav:after {
+    clear: both;
+}
+.top-nav {
+
+    *zoom: 1;
+    margin: 0;
+}
+nav.top-nav{
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+nav {
+    background-color: #323232;
+    position: relative;
+}
+nav ul {
+    padding: 0;
+    text-align:center;
+}
+nav li {
+    display: inline-block;
+    margin: 5px 8px;
+}
+nav li.active a,nav li  a:hover{
+    text-decoration:none;
+    color: #2EB398;
+}
+nav li  a {
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+nav a#pull {
+    display: none;
+}
+nav .logo img{
+    border-radius: 50%;
+}
+/*Section*/
+section{
+    width: 100%;
+    min-height: 100%!important;
+}
+/*Home*/
+#home{
+    width: 100%;
+    min-height: 100%!important;
+    background-image: url('../images/bg-home.jpg');
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bg-home{
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjU0Zjc1IiBzdG9wLW9wYWNpdHk9IjAuOSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNGU4MWI2IiBzdG9wLW9wYWNpdHk9IjAuOSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(-45deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,0.9)));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%);
+ /* IE10+ */
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6254f75', endColorstr='#e64e81b6',GradientType=1 );
+ /* IE6-8 fallback on horizontal gradient */
+    width: 100%;
+    height: 100%!important;
+    padding-top: 70px;
+}
+.home h1.heading{
+
+    text-shadow: 0px 1px 0px #CCC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+}
+.home h1.heading span{
+    font-size: 50px;
+}
+.home .img{
+    border-right: 5px solid gray;
+}
+.home .slider{
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+}
+.home .img div{
+    list-style: none;
+}
+.home .img div img{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out 0s;
+}
+.home .name{
+    margin-bottom: 50px;
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+}
+.home .info h3{
+    cursor: pointer;
+    text-shadow:0 2px 1px rgba(0,0,0,.3);
+}
+.home .info li{
+    transition: 0.5s;
+    cursor: pointer;
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+}
+.home .contact li:hover i{
+    color: blue;
+}
+.home .contact li:hover{
+    color: blue;
+}
+.copyright{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    color: rgba(65,70,65,0.7);
+    text-align: right;
+}
+/* About */
+#about{
+    background-image: url('../images/bg-about.jpg');
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100%!important;
+}
+.about{
+    text-shadow:0 1px 1px rgba(0,0,0,.3);
+}
+.about .slider{
+    width: 100%;
+}
+.about .slider img{
+    padding: 5px;
+    border: 1px solid gray;
+    background-color: white;
+}
+.about .edu{
+    margin-top: 70px;
+}
+#teaching{
+    background-image: url('../images/teaching.jpg');
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    mheight: 100%!important;
+}
+.courses{
+    padding-bottom: 50px;
+}
+@media (max-width:768px){
+    nav .sub{
+        text-align: center;
+        display: none;
+    }
+    nav ul {
+        margin-top: 0px!important;
+    }
+    nav ul li{
+        width: 100px;
+    }
+    nav a#pull {
+        display: inline-block;
+        width: 50px;
+        color: #F26D7D;
+        text-align: right;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+    .navicon {
+        top: 30px;
+        left: 30px;
+    }
+    .logo{
+        display: block;
+    }
+     nav li a {
+        text-align:left;
+     }
+}
