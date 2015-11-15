@@ -210,6 +210,10 @@ section{
     padding-bottom: 50px;
 }
 @media (max-width:768px){
+    .copyright{
+        display: none;
+    }
+
     nav .sub{
         text-align: center;
         display: none;
