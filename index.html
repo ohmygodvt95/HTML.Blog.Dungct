@@ -27,6 +27,7 @@
         <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
         <link rel="stylesheet" type="text/css" href="css/timeline.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500|Raleway:400,500' rel='stylesheet' type='text/css'>
+        <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDRjsAupVw6hqUhhPPv95i2efr9H8fiNoM'></script>
     </head>
     <body onresize="reSize()">
         <!-- Navbar -->
@@ -34,7 +35,7 @@
             <ul class="top-nav nav_list">
                 <li class="sub"><a href="#about" title="About" class="scroll">About me</a></li>
                 <li class="sub"><a href="#teaching" class="scroll">Teaching</a></li>
-                <li class="logo"><a title="Home" href="#home" class="scroll"><img src="images/anh3.gif" height="50px" alt="Home" class="responsive"/></a></li>
+                <li class="logo"><a title="Home" href="#home" class="scroll"><img src="images/home.png" height="50px" alt="Home" class="responsive"/></a></li>
                 <li class="sub"><a href="publication.html" title="Publication">Publication</a></li>
                 <li class="sub"><a href="project.html" title="Project">Project</a></li>
             </ul>
@@ -44,7 +45,7 @@
         <section id="home">
             <div class="bg-home">
                 <div class="container home">
-                    <h1 class="text-center raleway upcase heading wow fadeInDown" data-wow-delay="0.25s"><span>W</span>elcome To my Websit<span>E</span></h1>
+                    <h1 class="text-center raleway upcase heading" data-wow-delay="0.25s"><span>W</span>elcome To my Websit<span>E</span></h1>
                     <div class="row">
                         <div class="col-sm-6 img">
                             <div class="slider center-block">
@@ -55,24 +56,30 @@
                                     <div class="item"><img src="images/anh4.jpg"  class="responsive img-circle center-block" alt="" height="220px" width="220px"></div>
                                 </div>
                             </div>
-                            <h3 class="text-center name wow fadeInDown" data-wow-delay="0.25s">Tuan-Dung Cao</h3>
+                            <h3 class="text-center name" data-wow-delay="0.25s">Tuan-Dung Cao</h3>
+                            <ul class="raleway link center-block">
+                                <li class="center-block"><a href="http://soict.hust.edu.vn/" title="Viện Công nghệ Thông tin và Truyền thông"><img src="images/soict.png" class="responsive center-block" alt=""></a></li>
+                                <li class="center-block"><a href="http://hust.edu.vn/" title=" Đại học Bách Khoa Hà Nội."><img src="images/hust.jpg" class="responsive center-block" alt=""></a></li>
+                            </ul>
                         </div>
                         <div class="col-sm-6 info">
                             <h3 class="raleway"><i class="fa fa-fw fa-dot-circle-o"></i> Information</h3>
-                            <ul class="raleway wow fadeInDown" data-wow-delay="0.5s">
+                            <ul class="raleway">
                                 <li>Hanoi University of Science Technology.</li>
                                 <li>School of Information & Communication Technology.</li>
-                                <li>Ph.D. in Informatics and Computer Science.</li>
+                                <!-- <li>Ph.D. in Informatics and Computer Science.</li> -->
                                 <li>Vice Deputy of Department of Software Engineering.</li>
                             </ul>
                             <h3 class="raleway"><i class="fa fa-fw fa-dot-circle-o"></i> Contact me</h3>
-                            <ul class="raleway contact wow fadeInDown" data-wow-delay="0.45s">
+                            <ul class="raleway contact" data-wow-delay="0.45s">
                                 <li><i class="fa fa-fw fa-envelope"></i><a href="mailto:dungct@it-hut.edu.vn"> dungct@it-hut.edu.vn</a> | <a href="mailto:dungct-fit@mail.hut.edu.vn"> dungct-fit@mail.hut.edu.vn</a></li>
                                 <li><i class="fa fa-fw fa-phone"></i> (84-4)3 8682 595</li>
-                                <li><i class="fa fa-fw fa-map-marker"></i> Room 327,C1,No. 1 Dai Co Viet,Hai Ba Trung,Ha Noi,Viet Nam</li>
+                                <li><i class="fa fa-fw fa-map-marker"></i> Room 601, B1, Hanoi Universtiy of Science and Technology, Ta Quang Buu, Hai Ba Trung,Ha Noi,Viet Nam</li>
                                 <li><i class="fa fa-fw fa-info"></i><a href="http://soict.hut.edu.vn/~dungct/">http://soict.hut.edu.vn/~dungct/</a></li>
                             </ul>
-                            <div class="copyright">Copyright © 2015. All Rights Reserved. <a href="#home">Go to Top</a></div>
+
+                            <div class="map" id="map"></div>
+                            <div class="copyright">© Tuan-Dung Cao. Hanoi University of Science and Technology. <a href="#home"><i class="fa fa-fw fa-angle-double-up fa-3x"></i></a></div>
                         </div>
                     </div>
                 </div>
@@ -283,6 +290,38 @@
             };
         }
         </script>
+        <script>
+
+        function initMap() {
+          var hanoi = new google.maps.LatLng(21.004506, 105.8464338);
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: hanoi,
+            zoom: 18
+          });
+
+          var coordInfoWindow = new google.maps.InfoWindow();
+          coordInfoWindow.setContent(createInfoWindowContent());
+          coordInfoWindow.setPosition(hanoi);
+          coordInfoWindow.open(map);
+
+          map.addListener('zoom_changed', function() {
+            coordInfoWindow.setContent(createInfoWindowContent());
+            coordInfoWindow.open(map);
+          });
+        }
+
+        var TILE_SIZE = 256;
+
+        function createInfoWindowContent() {
+          return '<i class="fa fa-fw fa-map-marker"></i>Room 601, B1, Hanoi Universtiy of Science and Technology';
+        }
+
+            </script>
+            <script async defer
+                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJJPKRBmpk4o0VjtWorVFPaXWD5-zLjEs &signed_in=true&callback=initMap">
+            </script>
+
 
     </body>
 </html>
