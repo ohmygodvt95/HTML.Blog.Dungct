@@ -8,10 +8,14 @@
     MORE:    https://en.wikipedia.org/wiki/Markdown#Example
     Leng Keng - levinhthien.bka@gmail.com
  -->
-<!-- MISEPT -->
-# MISEPT
+# To be updated
 
-* MISEPT is Enterprise knowlege management platform developped around semantic technology. Relying on an ontology that plays role of sharing conceptualization primitive vocabulary for providing ingredient to represent the enterprise structure as well as specialized knowledge - the expertise of enterprise can be acquired - refined and imported to this system as semantic annotations. Then they can be accessed easily through a semantic query interface. MISEPT is a web based system contains many tools supporting all these task thanks to various component such as ontology management- knowledge management- semantic search- SVG visualization,..
+# iCompanion (2011-2013)
+* This project aims at developing a intelligent travel guide application running on smartphone by applying Semantic Web technologies. The research focuses on the semantic search and recommendation of travel places, local services and user-relevant itinerary.
+
+# STORES
+
+* STORES is Enterprise knowlege management platform developped around semantic technology. Relying on an ontology that plays role of sharing conceptualization primitive vocabulary for providing ingredient to represent the enterprise structure as well as specialized knowledge - the expertise of enterprise can be acquired - refined and imported to this system as semantic annotations. Then they can be accessed easily through a semantic query interface. MISEPT is a web based system contains many tools supporting all these task thanks to various component such as ontology management- knowledge management- semantic search- SVG visualization,..
 * This system is independent of application domains and can be deployed in many fields such as manufaction, heath care or security.
 * Project was launched in the context of the collaboration between Department of Software Engineering with Mitani Sangyo company, Japan.
 
