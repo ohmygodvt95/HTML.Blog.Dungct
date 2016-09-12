@@ -3,6 +3,7 @@
 * Dữ liệu ở Publication và project chỉ cần sửa bằng cú pháp markdown
   * data/publication.md
   * data/project.md
+  
 ### Markdown
 * Tham khảo [tại đây](https://en.wikipedia.org/wiki/Markdown#Example)
 * Markdown Systax (" " = space) cụ thể áp dụng:
@@ -12,5 +13,5 @@
   * `"*abcd*"`                    ->`"<italic>abcd</italic>"`
   * `"**abcd**"`                  ->`"<bold>abcd</bold>"`
 
-Coypyright 2015 by @author Leng Keng - levinhthien.bka@gmail.com -
+### Coypyright &copy; 2015 by Lê Vĩnh Thiện - levinhthien.bka@gmail.com
 
